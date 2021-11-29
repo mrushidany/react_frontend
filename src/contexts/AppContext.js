@@ -3,7 +3,7 @@ import axios from "axios";
 import {
   NOT_LOGGED_IN,
   LOG_IN_FORM,
-  SIGN_UP_FORM,
+  REGISTRATION_FORM,
   LOGGED_IN,
 } from "../constants/AuthStatus";
 
@@ -30,7 +30,7 @@ const AppProvider = (props) => {
   }
 
   function changeAuthStatusSignup() {
-    setAuthStatus(SIGN_UP_FORM);
+    setAuthStatus(REGISTRATION_FORM);
   }
 
   function handleUserNameInput(changeEvent) {
