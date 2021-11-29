@@ -118,7 +118,7 @@ const AuthSignup = () => {
             text-center rounded py-2 px-10 border border-blue-500 focus:outline-none"
             onClick={() => signup()}
           >
-            Signup
+            Register
           </button>
         </div>
         <div className="w-full text-red-600 text-center mt-8">

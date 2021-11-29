@@ -29,7 +29,7 @@ const AppProvider = (props) => {
     setAuthStatus(LOG_IN_FORM);
   }
 
-  function changeAuthStatusSignup() {
+  function changeAuthStatusRegister() {
     setAuthStatus(REGISTRATION_FORM);
   }
 
@@ -165,7 +165,7 @@ const AppProvider = (props) => {
       value={{
         authStatus,
         changeAuthStatusLogin,
-        changeAuthStatusSignup,
+        changeAuthStatusRegister,
         userId,
         userName,
         userNameInput,
