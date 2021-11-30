@@ -1,5 +1,6 @@
 {
   "name": "react-auth",
+  "homepage": "http://frontend.inovora.co.tz",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

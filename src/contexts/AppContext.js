@@ -75,12 +75,13 @@ const AppProvider = (props) => {
                 },
                 // GET USER ERROR
                 (error) => {
-                  setErrorMessage("Could not complete the sign up");
+                  setErrorMessage("Could not complete the registration");
                 }
               );
             },
             // SIGNUP ERROR
             (error) => {
+              console.log(error);
               if (error.response.data.errors.name) {
                 setErrorMessage(error.response.data.errors.name[0]);
               } else if (error.response.data.errors.email) {
@@ -90,14 +91,14 @@ const AppProvider = (props) => {
               } else if (error.response.data.message) {
                 setErrorMessage(error.response.data.message);
               } else {
-                setErrorMessage("Could not complete the sign up");
+                setErrorMessage("Could not complete the registration");
               }
             }
           );
       },
       // COOKIE ERROR
       (error) => {
-        setErrorMessage("Could not complete the sign up");
+        setErrorMessage("Could not complete the registration");
       }
     );
   };
