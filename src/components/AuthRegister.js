@@ -29,7 +29,7 @@ const AuthSignup = () => {
     <div className="md:flex w-full rounded ">
       <div className="md:w-1/2 bg-white pt-20 pb-16 px-12 rounded-t-lg md:rounded-l-lg  md:rounded-r-none">
         <div className="font-inter_extrabold text-4xl text-blue-500 text-center mb-8">
-          Signup
+          Register
         </div>
         {/* USER NAME */}
         <div className="grid grid-cols-7 w-full mb-4">
