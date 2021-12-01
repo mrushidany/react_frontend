@@ -125,7 +125,7 @@ const AppProvider = (props) => {
                   title: "Success",
                   text: response.data.message,
                   type: response.data.status,
-                  icon: response.data.status,
+                  icon: "success",
                   timer: 2000,
                 });
               }
@@ -146,6 +146,13 @@ const AppProvider = (props) => {
             // LOGIN ERROR
             (error) => {
               if (error.response) {
+                Swal.fire({
+                  title: "Error",
+                  text: error.response.data.message,
+                  type: response.data.status,
+                  icon: "error",
+                  timer: 2000,
+                });
                 setErrorMessage(error.response.data.message);
               } else {
                 setErrorMessage("Could not complete the login");
