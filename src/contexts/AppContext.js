@@ -139,6 +139,12 @@ const AppProvider = (props) => {
                 },
                 // GET USER ERROR
                 (error) => {
+                  Swal.fire({
+                    title: "Error",
+                    text: "Could not complete the login",
+                    icon: "warning",
+                    timer: 2000,
+                  });
                   setErrorMessage("Could not complete the login");
                 }
               );
