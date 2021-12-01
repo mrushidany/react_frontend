@@ -6,6 +6,7 @@ import {
   REGISTRATION_FORM,
   LOGGED_IN,
 } from "../constants/AuthStatus";
+import Swal from "sweetalert2";
 
 const AppContext = React.createContext();
 
@@ -117,8 +118,17 @@ const AppProvider = (props) => {
           })
           .then(
             (response) => {
-              //console.log(response);
+              console.log(response.data);
               // GET USER
+              if (response.data.status === "success") {
+                Swal.fire({
+                  title: "Success",
+                  text: response.data.message,
+                  type: response.data.status,
+                  icon: response.data.status,
+                  timer: 2000,
+                });
+              }
               axios.get(hostName + "api/user").then(
                 (response) => {
                   //console.log(response);
