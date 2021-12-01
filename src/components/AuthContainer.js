@@ -10,6 +10,7 @@ import AuthRegister from "./AuthRegister";
 import AuthLogin from "./AuthLogin";
 import AuthLogout from "./AuthLogout";
 import { AppContext } from "../contexts/AppContext";
+import Dashboard from "./Dashboard";
 
 const AuthContainer = () => {
   const appContext = useContext(AppContext);
@@ -31,7 +32,7 @@ const AuthContainer = () => {
         <AuthRegister option="register" />
       </div>
       <div className={showLoggedIn + " justify-end py-4"}>
-        <AuthLogout />
+        <Dashboard />
       </div>
     </div>
   );
