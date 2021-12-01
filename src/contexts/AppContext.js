@@ -15,7 +15,7 @@ const AppProvider = (props) => {
   if (process.env.NODE_ENV === "development") {
     hostName = "http://localhost:8000/";
   } else if (process.env.NODE_ENV === "production") {
-    hostName = "https://authapi.bob-humphrey.com/";
+    hostName = "http://backend.inovora.co.tz/";
   }
 
   const [authStatus, setAuthStatus] = useState(NOT_LOGGED_IN);
