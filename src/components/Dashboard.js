@@ -6,7 +6,7 @@ const Dashboard = () => {
   const { userName, logout } = appContext;
 
   return (
-    <div>
+    <div className="flex w-full justify-center bg-white">
       <p>Welcome to the Dashboard</p>
     </div>
   );
