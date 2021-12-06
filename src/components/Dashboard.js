@@ -3,11 +3,13 @@ import { AppContext } from "../contexts/AppContext";
 
 const Dashboard = () => {
   const appContext = useContext(AppContext);
-  const { userName, logout } = appContext;
+  const { userName, userId, logout } = appContext;
 
   return (
     <div className="flex w-full justify-center bg-white">
-      <p>Welcome to the Dashboard</p>
+      <p>
+        Hello {userName} {userId} welcome to the Dashboard {logout}
+      </p>
     </div>
   );
 };
