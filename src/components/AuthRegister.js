@@ -66,8 +66,9 @@ const AuthSignup = () => {
         {/* USER ROLES */}
         <div className="grid grid-cols-7 w-full mb-4">
           <div className="col-span-1 bg-blue-500 pt-1">
-            <MdAccessibility />
+            <MdAccessibility className="text-white text-3xl mx-auto" />
           </div>
+          <div className="col-span-6"></div>
         </div>
         {/* HIDDEN PASSWORD */}
         <div className={showHiddenPassword + " grid grid-cols-7 w-full"}>
