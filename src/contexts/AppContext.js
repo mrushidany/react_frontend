@@ -205,6 +205,7 @@ const AppProvider = (props) => {
         handleUserNameInput,
         handleUserEmail,
         handleUserPassword,
+        handleUserRole,
         signup,
         login,
         logout,
