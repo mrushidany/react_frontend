@@ -25,6 +25,7 @@ const AppProvider = (props) => {
   const [userNameInput, setUserNameInput] = useState("");
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const [userRole, setUserRole] = useState("");
 
   function changeAuthStatusLogin() {
     setAuthStatus(LOG_IN_FORM);
@@ -49,6 +50,11 @@ const AppProvider = (props) => {
     setUserPassword(updatedUserPassword);
   }
 
+  function handleUserRole(changeEvent) {
+    let updatedUserRole = changeEvent.target.value;
+    setUserRole(updatedUserRole);
+  }
+
   const signup = () => {
     axios.defaults.withCredentials = true;
     // CSRF COOKIE
@@ -61,6 +67,7 @@ const AppProvider = (props) => {
             name: userNameInput,
             email: userEmail,
             password: userPassword,
+            role: userRole,
           })
           .then(
             (response) => {

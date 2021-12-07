@@ -14,9 +14,11 @@ const AuthSignup = () => {
     userNameInput,
     userEmail,
     userPassword,
+    userRole,
     handleUserNameInput,
     handleUserEmail,
     handleUserPassword,
+    handleUserRole,
     signup,
     errorMessage,
   } = appContext;
@@ -76,6 +78,11 @@ const AuthSignup = () => {
           <div className="col-span-6">
             <Select
               options={roleOptions}
+              name="roles"
+              type="roles"
+              placeholder="Select"
+              onChange={handleUserRole}
+              value={userRole}
               className="w-full bg-blue-200 placeholder-blue-800 pl-3 py-2"
             />
           </div>
