@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "../contexts/AppContext";
-import { MdEmail } from "react-icons/md";
+import { MdAccessibility, MdEmail } from "react-icons/md";
 import { GoKey } from "react-icons/go";
 import { IoMdPerson } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
@@ -61,6 +61,12 @@ const AuthSignup = () => {
               value={userEmail}
               onChange={handleUserEmail}
             />
+          </div>
+        </div>
+        {/* USER ROLES */}
+        <div className="grid grid-cols-7 w-full mb-4">
+          <div className="col-span-1 bg-blue-500 pt-1">
+            <MdAccessibility />
           </div>
         </div>
         {/* HIDDEN PASSWORD */}
