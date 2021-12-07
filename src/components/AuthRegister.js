@@ -76,15 +76,18 @@ const AuthSignup = () => {
             <MdAccessibility className="text-white text-3xl mx-auto" />
           </div>
           <div className="col-span-6">
-            <Select
-              options={roleOptions}
-              name="roles"
-              type="roles"
-              placeholder="Select"
+            <select
+              className="w-full bg-blue-200 placeholder-blue-800 pl-3 py-2"
+              name="role"
               onChange={handleUserRole}
               value={userRole}
-              className="w-full bg-blue-200 placeholder-blue-800 pl-3 py-2"
-            />
+            >
+              {roleOptions.map((roleOption) => (
+                <option value={roleOption.value} className="text-black">
+                  {roleOption.label}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
         {/* HIDDEN PASSWORD */}
