@@ -6,6 +6,7 @@ import { IoMdPerson } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import AuthMenu from "./AuthMenu";
+import Select from "react-select";
 
 const AuthSignup = () => {
   const appContext = useContext(AppContext);
@@ -25,6 +26,10 @@ const AuthSignup = () => {
   function togglePassword() {
     setHidePassword(!hidePassword);
   }
+  const roleOptions = [
+    { value: "admin", label: "Administrator" },
+    { value: "client", label: "Client" },
+  ];
   return (
     <div className="md:flex w-full rounded ">
       <div className="md:w-1/2 bg-white pt-20 pb-16 px-12 rounded-t-lg md:rounded-l-lg  md:rounded-r-none">
@@ -68,7 +73,12 @@ const AuthSignup = () => {
           <div className="col-span-1 bg-blue-500 pt-1">
             <MdAccessibility className="text-white text-3xl mx-auto" />
           </div>
-          <div className="col-span-6"></div>
+          <div className="col-span-6">
+            <Select
+              options={roleOptions}
+              className="w-full bg-blue-200 placeholder-blue-800 pl-3 py-2"
+            />
+          </div>
         </div>
         {/* HIDDEN PASSWORD */}
         <div className={showHiddenPassword + " grid grid-cols-7 w-full"}>
