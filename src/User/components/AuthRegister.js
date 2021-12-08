@@ -6,7 +6,6 @@ import { IoMdPerson } from "react-icons/io";
 import { FaRegEye } from "react-icons/fa";
 import { FaRegEyeSlash } from "react-icons/fa";
 import AuthMenu from "./AuthMenu";
-import Select from "react-select";
 
 const AuthSignup = () => {
   const appContext = useContext(AppContext);
