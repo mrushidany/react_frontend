@@ -1,17 +1,16 @@
-import React, { useContext } from "react";
-import { AppContext } from "../contexts/AppContext";
+import React from "react";
 import AuthMenu from "./AuthMenu";
 import Unlock from "../svg/Unlock";
 
 const AuthNotLoggedIn = () => {
-  const appContext = useContext(AppContext);
-  const {
-    userEmail,
-    userPassword,
-    handleUserEmail,
-    handleUserPassword,
-    login,
-  } = appContext;
+  // const appContext = useContext(AppContext);
+  // // const {
+  // //   userEmail,
+  // //   userPassword,
+  // //   handleUserEmail,
+  // //   handleUserPassword,
+  // //   login,
+  // // } = appContext;
   return (
     <div className="md:flex w-full rounded ">
       <div className="md:w-1/2 bg-white py-24 px-12 rounded-t-lg md:rounded-l-lg  md:rounded-r-none">

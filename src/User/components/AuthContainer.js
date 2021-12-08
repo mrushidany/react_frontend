@@ -8,13 +8,12 @@ import {
 import AuthNotLoggedIn from "./AuthNotLoggedIn";
 import AuthRegister from "./AuthRegister";
 import AuthLogin from "./AuthLogin";
-import AuthLogout from "./AuthLogout";
 import { AppContext } from "../contexts/AppContext";
 import Dashboard from "./Dashboard";
 
 const AuthContainer = () => {
   const appContext = useContext(AppContext);
-  const { authStatus, errorMessage } = appContext;
+  const { authStatus } = appContext;
   const showNotLoggedIn = authStatus === NOT_LOGGED_IN ? "" : "hidden";
   const showLoginForm = authStatus === LOG_IN_FORM ? "" : "hidden";
   const showRegisterForm = authStatus === REGISTRATION_FORM ? "" : "hidden";
