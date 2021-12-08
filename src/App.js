@@ -1,6 +1,6 @@
 import React from "react";
 import "./css/tailwind.css";
-import { AppProvider } from "./contexts/AppContext";
+import { AppProvider } from "./User/contexts/AppContext";
 import AuthContainer from "./User/components/AuthContainer";
 
 function App() {
