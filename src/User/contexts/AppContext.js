@@ -13,7 +13,7 @@ const AppContext = React.createContext();
 const AppProvider = (props) => {
   let hostName = "";
   if (process.env.NODE_ENV === "development") {
-    hostName = "http://localhost:8000/";
+    hostName = "http://localhost:9000/";
   } else if (process.env.NODE_ENV === "production") {
     hostName = "http://backend.inovora.co.tz/";
   }
